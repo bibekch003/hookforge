@@ -23,6 +23,9 @@ raw take  ──▶  audio intelligence  ──▶  hook planner  ──▶  vis
 | Measured end-to-end | 3 variants × 2 platforms in **57 s** on a 2-vCPU container |
 | Status | ~50 % — working core pipeline, honest roadmap in §12 |
 
+**Repository:** [github.com/bibekch003/hookforge](https://github.com/bibekch003/hookforge) ·
+**Track:** Open Track → Autonomous Creator Agents · **Team:** CodeDev#02
+
 ---
 
 ## 1. The problem
@@ -167,7 +170,7 @@ app/
 ## 6. Quickstart
 
 ```bash
-git clone <your-repo-url> hookforge && cd hookforge
+git clone https://github.com/bibekch003/hookforge.git hookforge && cd hookforge
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 

@@ -42,7 +42,7 @@ from measured audio energy instead of a hunch.
 ## d. GitHub Repository Link (Public)
 
 ```
-<< https://github.com/<your-username>/hookforge >>
+https://github.com/bibekch003/hookforge
 ```
 
 The repository contains the working ~50 % codebase and the full `README.md` breakdown of
@@ -83,22 +83,19 @@ checklist: `docs/DEMO_SCRIPT.md`.
 
 ---
 
-## Pushing the repo (first time)
+## Repo status
 
-GitHub is not connected to this workspace, so the repo is delivered as a folder/zip. From
-the repo root:
+Already pushed: **https://github.com/bibekch003/hookforge** — public, `main` branch, MIT
+licence, 36 files. Verified by cloning it fresh and running `python tests/test_pipeline.py`
+(11/11 pass) plus `python scripts/demo_run.py` (renders real MP4s).
+
+To update it later:
 
 ```bash
-git init
-git add .
-git commit -m "Hookforge: agentic retention studio for solo creators (~50% prototype)"
-git branch -M main
-git remote add origin https://github.com/<your-username>/hookforge.git
-git push -u origin main
+git clone https://github.com/bibekch003/hookforge.git
+# ... edit files ...
+git add -A && git commit -m "describe the change" && git push
 ```
-
-Then, on GitHub: **Settings → General → Danger Zone → Change visibility → Public**, and
-confirm `README.md` renders with the diagram and the thumbnail image.
 
 > If the repo must stay private until judging closes, add the organisers as collaborators
 > instead — the form explicitly requires *Public*.
