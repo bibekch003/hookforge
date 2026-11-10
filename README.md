@@ -169,12 +169,15 @@ app/
 
 ## 6. Quickstart
 
-**Requires Python 3.11 – 3.13** (3.12 recommended — that is the version the suite is verified
-on). Do **not** use Python 3.14/3.15 yet: `opencv-python-headless`, `PyYAML` and `watchfiles`
-(pulled in by `uvicorn[standard]`) publish no wheels for them, so pip falls back to compiling
-from source and fails with `error: Microsoft Visual C++ 14.0 or greater is required` unless
-you have MSVC Build Tools installed. If you hit that, install Python 3.12 and rebuild the
-venv — nothing else needs to change.
+**Requires Python 3.11+** — verified on 3.12 with the full suite and a demo run.
+
+`requirements.txt` deliberately asks for plain `uvicorn`, **not** `uvicorn[standard]`. That
+extra pulls `PyYAML` and `watchfiles`, which lag new CPython releases by months; on a
+brand-new Python they have no wheels, pip falls back to compiling them, and it dies with
+`error: Microsoft Visual C++ 14.0 or greater is required`. Nothing here needs the extra —
+uvicorn uses its pure-Python h11 loop and StatReload, so `--reload` still works. Every
+package that remains ships an `abi3` or versioned wheel, so recent Pythons install without
+a compiler.
 
 ```bash
 git clone https://github.com/bibekch003/hookforge.git hookforge && cd hookforge
@@ -202,7 +205,7 @@ either.
 
 | Symptom | Cause / fix |
 |---|---|
-| `error: Microsoft Visual C++ 14.0 or greater is required` | Python 3.14+ has no wheels for opencv/PyYAML/watchfiles. Install Python 3.12, delete `.venv`, rebuild it |
+| `error: Microsoft Visual C++ 14.0 or greater is required` | Something in the tree is compiling from source, usually an optional extra on a very new Python. Install this exact `requirements.txt` instead of adding extras, or use Python 3.12/3.13 |
 | `python` opens the Microsoft Store | Windows App Execution Alias is shadowing Python. Settings → Apps → Advanced app settings → App execution aliases → turn off `python.exe` / `python3.exe`, or use `py` instead |
 | `Activate.ps1 cannot be loaded` (PowerShell) | `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` in that window first |
 | `pip` / `uvicorn` not recognised | The venv is not activated, or the install above failed — check the prompt shows `(.venv)` |

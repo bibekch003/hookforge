@@ -1,6 +1,11 @@
 # Hookforge runtime requirements
 fastapi>=0.110
-uvicorn[standard]>=0.27
+# Plain uvicorn, deliberately NOT uvicorn[standard]: the extra pulls PyYAML and
+# watchfiles, which lag new CPython releases by months. On a fresh Python (3.15 at
+# the time of writing) that turns `pip install` into a source build and fails with
+# "Microsoft Visual C++ 14.0 or greater is required". Nothing here needs the extra:
+# uvicorn falls back to its pure-Python h11 loop and StatReload for --reload.
+uvicorn>=0.27
 python-multipart>=0.0.9
 numpy>=1.26
 opencv-python-headless>=4.9,<5
