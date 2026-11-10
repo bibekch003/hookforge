@@ -169,6 +169,13 @@ app/
 
 ## 6. Quickstart
 
+**Requires Python 3.11 – 3.13** (3.12 recommended — that is the version the suite is verified
+on). Do **not** use Python 3.14/3.15 yet: `opencv-python-headless`, `PyYAML` and `watchfiles`
+(pulled in by `uvicorn[standard]`) publish no wheels for them, so pip falls back to compiling
+from source and fails with `error: Microsoft Visual C++ 14.0 or greater is required` unless
+you have MSVC Build Tools installed. If you hit that, install Python 3.12 and rebuild the
+venv — nothing else needs to change.
+
 ```bash
 git clone https://github.com/bibekch003/hookforge.git hookforge && cd hookforge
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
@@ -188,7 +195,19 @@ uvicorn app.main:app --reload --port 8000
 Or `make install sample demo serve`.
 
 ffmpeg: the app uses your system `ffmpeg` if present, otherwise the static binary shipped
-by `imageio-ffmpeg` (installed with `requirements.txt`). No apt step required.
+by `imageio-ffmpeg` (installed with `requirements.txt`). No apt step required — on Windows
+either.
+
+**Troubleshooting**
+
+| Symptom | Cause / fix |
+|---|---|
+| `error: Microsoft Visual C++ 14.0 or greater is required` | Python 3.14+ has no wheels for opencv/PyYAML/watchfiles. Install Python 3.12, delete `.venv`, rebuild it |
+| `python` opens the Microsoft Store | Windows App Execution Alias is shadowing Python. Settings → Apps → Advanced app settings → App execution aliases → turn off `python.exe` / `python3.exe`, or use `py` instead |
+| `Activate.ps1 cannot be loaded` (PowerShell) | `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` in that window first |
+| `pip` / `uvicorn` not recognised | The venv is not activated, or the install above failed — check the prompt shows `(.venv)` |
+| Browser says "engine unreachable" | uvicorn is not running, or on another port |
+| `No module named app` | Run from the repo root (the folder containing `app/`) |
 
 ## 7. Using it
 

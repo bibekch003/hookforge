@@ -169,6 +169,7 @@ python scripts/demo_run.py --platforms youtube_shorts,youtube --variants 3 --cli
 
 | Symptom | Fix |
 |---|---|
+| `Microsoft Visual C++ 14.0 or greater is required` | Python 3.14+ has no wheels for opencv/PyYAML/watchfiles. Install Python 3.12, delete `.venv`, rebuild |
 | `No ffmpeg found` | `pip install imageio-ffmpeg` (the app auto-detects it) |
 | `Sample clip missing` | `python scripts/make_sample_assets.py` |
 | Dashboard shows "engine unreachable" | uvicorn not running, or wrong port |
