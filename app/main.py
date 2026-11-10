@@ -74,6 +74,7 @@ async def analyze(
     engine: str = Form("offline"),
     clip_seconds: float = Form(12.0),
     burn_captions: bool = Form(True),
+    transcript: str = Form(""),
 ) -> JSONResponse:
     suffix = Path(file.filename or "clip.mp4").suffix.lower()
     if suffix not in ALLOWED_EXT:
@@ -87,12 +88,11 @@ async def analyze(
         dest.unlink(missing_ok=True)
         raise HTTPException(413, f"File is {size_mb:.0f} MB; limit is {MAX_UPLOAD_MB} MB.")
 
-    # sidecar transcript, if the upload came with one
-    if file.filename:
-        sidecar = UPLOAD_DIR / (dest.stem + ".txt")
-        if not sidecar.exists():
-            sidecar.write_text("", encoding="utf-8")
-            sidecar.unlink()
+    # A transcript pasted into the dashboard is written as the sidecar the pipeline
+    # already knows how to read. Without this the field is silently dropped and the
+    # hook planner falls back to subject-free copy.
+    if transcript.strip():
+        dest.with_suffix(".txt").write_text(transcript.strip(), encoding="utf-8")
 
     plist = [p.strip() for p in platforms.split(",") if p.strip()]
     try:
