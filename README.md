@@ -24,7 +24,12 @@ raw take  ──▶  audio intelligence  ──▶  hook planner  ──▶  vis
 | Status | ~50 % — working core pipeline, honest roadmap in §12 |
 
 **Repository:** [github.com/bibekch003/hookforge](https://github.com/bibekch003/hookforge) ·
+**Output showcase:** [bibekch003.github.io/hookforge](https://bibekch003.github.io/hookforge/) ·
 **Track:** Open Track → Autonomous Creator Agents · **Team:** CodeDev#02
+
+The showcase is a static snapshot of one real run (thumbnails, scores, playable clips).
+GitHub Pages serves files only, so it cannot process uploads — run the app locally or in a
+Codespace for that, see §6.
 
 ---
 

@@ -1,8 +1,27 @@
 # Deploying Hookforge
 
 Three routes, easiest first. All of them run the **real application** — the FastAPI
-backend with ffmpeg and OpenCV — not a static screenshot gallery. That matters: this app
-processes video, so it cannot be hosted on GitHub Pages or Netlify.
+backend with ffmpeg and OpenCV. That matters: this app processes video, so it cannot be
+hosted on GitHub Pages or Netlify.
+
+## What GitHub Pages *is* used for here
+
+**https://bibekch003.github.io/hookforge/** is live, but it is a **static output showcase**,
+not the app: the energy curve, the three ranked variants, their real thumbnails, scores and
+playable MP4s from one actual run. Nothing on it accepts an upload.
+
+It is generated, not hand-written — never edit `index.html` directly:
+
+```bash
+python scripts/demo_run.py --platforms youtube_shorts,youtube --variants 3 --clip 10
+python scripts/build_showcase.py --report data/exports/<id>/report.json
+git add index.html showcase && git commit -m "Refresh showcase" && git push
+```
+
+Pages is configured for the `main` branch at `/`, with `.nojekyll` so the HTML is served
+as-is. That is also why `index.html` sits in the repo root.
+
+---
 
 Nothing here needs a credit card. Every route is undoable by deleting one thing.
 
