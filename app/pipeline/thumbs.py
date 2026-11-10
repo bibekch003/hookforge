@@ -236,6 +236,22 @@ def _legibility(bgr: np.ndarray, box: list[int]) -> float:
     return float(max(0.0, min(1.0, 1.0 - noise / 60.0)))
 
 
+def _subject_term(ratio: float, count: int, method: str) -> float:
+    """Subject presence sub-score: detection first, size second.
+
+    A blur-pad vertical render shrinks the subject into a letterboxed band, so its
+    area ratio stays tiny even when a face is clearly detected. Scoring on the raw
+    ratio alone therefore reported "face present" and "no clear human subject" in
+    the same result. Detection now carries most of the weight and area scales the
+    rest, which is also what the sub-score actually claims to measure.
+    """
+    if count <= 0:
+        return 0.0
+    if method == "haar":
+        return float(min(1.0, 0.45 + 0.55 * min(1.0, ratio / 0.18)))
+    return float(min(1.0, 0.35 + 0.65 * min(1.0, ratio / 0.30)))
+
+
 def score_thumbnail(image_path: str | Path, text_box: list[int] | None = None) -> dict:
     bgr = cv2.imread(str(image_path))
     if bgr is None:
@@ -248,16 +264,18 @@ def score_thumbnail(image_path: str | Path, text_box: list[int] | None = None) -
     edges = cv2.Canny(gray, 90, 190)
     clutter = float(min(1.0, edges.mean() / 42.0))
 
-    score = (0.28 * contrast + 0.18 * colour + 0.26 * min(1.0, face * 2.6)
+    subject = _subject_term(face, n_faces, face_method)
+
+    score = (0.28 * contrast + 0.18 * colour + 0.26 * subject
              + 0.18 * legib + 0.10 * (1.0 - clutter))
     reasons = []
     if contrast > 0.55:
         reasons.append("strong tonal separation")
-    if face > 0.02:
+    if n_faces > 0:
         label = "face" if face_method == "haar" else "human subject"
-        reasons.append(f"{label} present ({n_faces} region(s))")
+        reasons.append(f"{label} present ({n_faces} region(s), {face:.1%} of frame)")
     else:
-        reasons.append("no clear human subject")
+        reasons.append("no clear human subject detected in this frame")
     if colour > 0.5:
         reasons.append("saturated palette")
     if legib > 0.6:
@@ -272,6 +290,7 @@ def score_thumbnail(image_path: str | Path, text_box: list[int] | None = None) -
         "face_ratio": round(face, 4),
         "faces": n_faces,
         "subject_method": face_method,
+        "subject_score": round(subject, 3),
         "legibility": round(legib, 3),
         "clutter": round(clutter, 3),
         "reasons": reasons,

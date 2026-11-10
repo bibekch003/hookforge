@@ -1,5 +1,5 @@
 {
-  "video_id": "sample_creator_clip-7100e6ba",
+  "video_id": "sample_creator_clip-8ddade23",
   "filename": "sample_creator_clip.mp4",
   "meta": {
     "width": 1280,
@@ -196,7 +196,7 @@
   ],
   "variants": [
     {
-      "variant_id": "v1-77552b",
+      "variant_id": "v1-7e64d4",
       "archetype": "curiosity_gap",
       "text": "Nobody tells you this about aspect ratios",
       "start": 16.0,
@@ -208,28 +208,29 @@
       "copy_strength": 0.74,
       "energy_match": 1.0,
       "meta": {},
-      "thumb_path": "/scratch/work/hookforge/data/thumbs/sample_creator_clip-7100e6ba/v1-77552b_bold_lower.jpg",
-      "thumb_url": "/media/thumbs/sample_creator_clip-7100e6ba/v1-77552b_bold_lower.jpg",
-      "poster_path": "/scratch/work/hookforge/data/thumbs/sample_creator_clip-7100e6ba/v1-77552b_poster.jpg",
+      "thumb_path": "/scratch/work/verify/data/thumbs/sample_creator_clip-8ddade23/v1-7e64d4_bold_lower.jpg",
+      "thumb_url": "/media/thumbs/sample_creator_clip-8ddade23/v1-7e64d4_bold_lower.jpg",
+      "poster_path": "/scratch/work/verify/data/thumbs/sample_creator_clip-8ddade23/v1-7e64d4_poster.jpg",
       "thumbnail_score": {
-        "score": 47.1,
+        "score": 56.0,
         "contrast": 0.84,
         "colorfulness": 0.178,
-        "face_ratio": 0.0625,
-        "faces": 3,
-        "subject_method": "skin-salience",
+        "face_ratio": 0.0178,
+        "faces": 1,
+        "subject_method": "haar",
+        "subject_score": 0.504,
         "legibility": 0.368,
         "clutter": 0.05,
         "reasons": [
           "strong tonal separation",
-          "human subject present (3 region(s))"
+          "face present (1 region(s), 1.8% of frame)"
         ]
       },
       "caption_count": 4,
       "caption_wps": 3.9,
       "caption_files": {
-        "srt": "/scratch/work/hookforge/data/work/v1-77552b.srt",
-        "vtt": "/scratch/work/hookforge/data/work/v1-77552b.vtt"
+        "srt": "/scratch/work/verify/data/work/v1-7e64d4.srt",
+        "vtt": "/scratch/work/verify/data/work/v1-7e64d4.vtt"
       },
       "caption_preview": [
         "The captions get rewritten for each platform because a",
@@ -241,32 +242,32 @@
         {
           "platform": "youtube_shorts",
           "label": "YouTube Shorts",
-          "path": "/scratch/work/hookforge/data/exports/sample_creator_clip-7100e6ba/v1-77552b_youtube_shorts.mp4",
+          "path": "/scratch/work/verify/data/exports/sample_creator_clip-8ddade23/v1-7e64d4_youtube_shorts.mp4",
           "width": 1080,
           "height": 1920,
           "size_mb": 0.29,
           "captions_burned": true,
           "warnings": [],
-          "download_url": "/media/exports/sample_creator_clip-7100e6ba/v1-77552b_youtube_shorts.mp4"
+          "download_url": "/media/exports/sample_creator_clip-8ddade23/v1-7e64d4_youtube_shorts.mp4"
         },
         {
           "platform": "youtube",
           "label": "YouTube (16:9)",
-          "path": "/scratch/work/hookforge/data/exports/sample_creator_clip-7100e6ba/v1-77552b_youtube.mp4",
+          "path": "/scratch/work/verify/data/exports/sample_creator_clip-8ddade23/v1-7e64d4_youtube.mp4",
           "width": 1920,
           "height": 1080,
           "size_mb": 0.26,
           "captions_burned": true,
           "warnings": [],
-          "download_url": "/media/exports/sample_creator_clip-7100e6ba/v1-77552b_youtube.mp4"
+          "download_url": "/media/exports/sample_creator_clip-8ddade23/v1-7e64d4_youtube.mp4"
         }
       ],
       "prediction": {
-        "predicted_watch_through": 0.7147,
-        "predicted_thumb_ctr": 0.0757,
+        "predicted_watch_through": 0.7414,
+        "predicted_thumb_ctr": 0.0806,
         "predicted_engagement_rate": 0.0717,
         "inputs": {
-          "thumb_score": 47.1,
+          "thumb_score": 56.0,
           "energy_match": 1.0,
           "copy_strength": 0.74,
           "duration_s": 10.0,
@@ -279,7 +280,7 @@
       "rank": 1
     },
     {
-      "variant_id": "v3-922f68",
+      "variant_id": "v3-5291f4",
       "archetype": "result_first",
       "text": "This is the result. Here's the 12 seconds that made it.",
       "start": 2.0,
@@ -291,28 +292,29 @@
       "copy_strength": 0.76,
       "energy_match": 1.0,
       "meta": {},
-      "thumb_path": "/scratch/work/hookforge/data/thumbs/sample_creator_clip-7100e6ba/v3-922f68_top_strip.jpg",
-      "thumb_url": "/media/thumbs/sample_creator_clip-7100e6ba/v3-922f68_top_strip.jpg",
-      "poster_path": "/scratch/work/hookforge/data/thumbs/sample_creator_clip-7100e6ba/v3-922f68_poster.jpg",
+      "thumb_path": "/scratch/work/verify/data/thumbs/sample_creator_clip-8ddade23/v3-5291f4_top_strip.jpg",
+      "thumb_url": "/media/thumbs/sample_creator_clip-8ddade23/v3-5291f4_top_strip.jpg",
+      "poster_path": "/scratch/work/verify/data/thumbs/sample_creator_clip-8ddade23/v3-5291f4_poster.jpg",
       "thumbnail_score": {
-        "score": 39.3,
+        "score": 51.6,
         "contrast": 0.809,
         "colorfulness": 0.152,
-        "face_ratio": 0.0108,
+        "face_ratio": 0.0167,
         "faces": 1,
-        "subject_method": "skin-salience",
+        "subject_method": "haar",
+        "subject_score": 0.501,
         "legibility": 0.203,
         "clutter": 0.045,
         "reasons": [
           "strong tonal separation",
-          "no clear human subject"
+          "face present (1 region(s), 1.7% of frame)"
         ]
       },
       "caption_count": 6,
       "caption_wps": 5.1,
       "caption_files": {
-        "srt": "/scratch/work/hookforge/data/work/v3-922f68.srt",
-        "vtt": "/scratch/work/hookforge/data/work/v3-922f68.vtt"
+        "srt": "/scratch/work/verify/data/work/v3-5291f4.srt",
+        "vtt": "/scratch/work/verify/data/work/v3-5291f4.vtt"
       },
       "caption_preview": [
         "first thousand viewers in the first three seconds.",
@@ -324,32 +326,32 @@
         {
           "platform": "youtube_shorts",
           "label": "YouTube Shorts",
-          "path": "/scratch/work/hookforge/data/exports/sample_creator_clip-7100e6ba/v3-922f68_youtube_shorts.mp4",
+          "path": "/scratch/work/verify/data/exports/sample_creator_clip-8ddade23/v3-5291f4_youtube_shorts.mp4",
           "width": 1080,
           "height": 1920,
           "size_mb": 0.41,
           "captions_burned": true,
           "warnings": [],
-          "download_url": "/media/exports/sample_creator_clip-7100e6ba/v3-922f68_youtube_shorts.mp4"
+          "download_url": "/media/exports/sample_creator_clip-8ddade23/v3-5291f4_youtube_shorts.mp4"
         },
         {
           "platform": "youtube",
           "label": "YouTube (16:9)",
-          "path": "/scratch/work/hookforge/data/exports/sample_creator_clip-7100e6ba/v3-922f68_youtube.mp4",
+          "path": "/scratch/work/verify/data/exports/sample_creator_clip-8ddade23/v3-5291f4_youtube.mp4",
           "width": 1920,
           "height": 1080,
           "size_mb": 0.36,
           "captions_burned": true,
           "warnings": [],
-          "download_url": "/media/exports/sample_creator_clip-7100e6ba/v3-922f68_youtube.mp4"
+          "download_url": "/media/exports/sample_creator_clip-8ddade23/v3-5291f4_youtube.mp4"
         }
       ],
       "prediction": {
-        "predicted_watch_through": 0.6945,
-        "predicted_thumb_ctr": 0.0718,
+        "predicted_watch_through": 0.7314,
+        "predicted_thumb_ctr": 0.0786,
         "predicted_engagement_rate": 0.0727,
         "inputs": {
-          "thumb_score": 39.3,
+          "thumb_score": 51.6,
           "energy_match": 1.0,
           "copy_strength": 0.76,
           "duration_s": 10.0,
@@ -362,7 +364,7 @@
       "rank": 2
     },
     {
-      "variant_id": "v2-1f652b",
+      "variant_id": "v2-dc7469",
       "archetype": "contrarian",
       "text": "Stop doing aspect ratios like this",
       "start": 5.0,
@@ -374,28 +376,29 @@
       "copy_strength": 0.6,
       "energy_match": 1.0,
       "meta": {},
-      "thumb_path": "/scratch/work/hookforge/data/thumbs/sample_creator_clip-7100e6ba/v2-1f652b_split_band.jpg",
-      "thumb_url": "/media/thumbs/sample_creator_clip-7100e6ba/v2-1f652b_split_band.jpg",
-      "poster_path": "/scratch/work/hookforge/data/thumbs/sample_creator_clip-7100e6ba/v2-1f652b_poster.jpg",
+      "thumb_path": "/scratch/work/verify/data/thumbs/sample_creator_clip-8ddade23/v2-dc7469_split_band.jpg",
+      "thumb_url": "/media/thumbs/sample_creator_clip-8ddade23/v2-dc7469_split_band.jpg",
+      "poster_path": "/scratch/work/verify/data/thumbs/sample_creator_clip-8ddade23/v2-dc7469_poster.jpg",
       "thumbnail_score": {
-        "score": 42.2,
+        "score": 36.2,
         "contrast": 0.256,
         "colorfulness": 0.107,
-        "face_ratio": 0.0875,
-        "faces": 2,
-        "subject_method": "skin-salience",
+        "face_ratio": 0.0,
+        "faces": 0,
+        "subject_method": "haar",
+        "subject_score": 0.0,
         "legibility": 0.954,
         "clutter": 0.004,
         "reasons": [
-          "human subject present (2 region(s))",
+          "no clear human subject detected in this frame",
           "clean plate under the text"
         ]
       },
       "caption_count": 5,
       "caption_wps": 5.5,
       "caption_files": {
-        "srt": "/scratch/work/hookforge/data/work/v2-1f652b.srt",
-        "vtt": "/scratch/work/hookforge/data/work/v2-1f652b.vtt"
+        "srt": "/scratch/work/verify/data/work/v2-dc7469.srt",
+        "vtt": "/scratch/work/verify/data/work/v2-dc7469.vtt"
       },
       "caption_preview": [
         "the intro. Now I open with the result, the mess, or",
@@ -407,32 +410,32 @@
         {
           "platform": "youtube_shorts",
           "label": "YouTube Shorts",
-          "path": "/scratch/work/hookforge/data/exports/sample_creator_clip-7100e6ba/v2-1f652b_youtube_shorts.mp4",
+          "path": "/scratch/work/verify/data/exports/sample_creator_clip-8ddade23/v2-dc7469_youtube_shorts.mp4",
           "width": 1080,
           "height": 1920,
           "size_mb": 0.41,
           "captions_burned": true,
           "warnings": [],
-          "download_url": "/media/exports/sample_creator_clip-7100e6ba/v2-1f652b_youtube_shorts.mp4"
+          "download_url": "/media/exports/sample_creator_clip-8ddade23/v2-dc7469_youtube_shorts.mp4"
         },
         {
           "platform": "youtube",
           "label": "YouTube (16:9)",
-          "path": "/scratch/work/hookforge/data/exports/sample_creator_clip-7100e6ba/v2-1f652b_youtube.mp4",
+          "path": "/scratch/work/verify/data/exports/sample_creator_clip-8ddade23/v2-dc7469_youtube.mp4",
           "width": 1920,
           "height": 1080,
           "size_mb": 0.36,
           "captions_burned": true,
           "warnings": [],
-          "download_url": "/media/exports/sample_creator_clip-7100e6ba/v2-1f652b_youtube.mp4"
+          "download_url": "/media/exports/sample_creator_clip-8ddade23/v2-dc7469_youtube.mp4"
         }
       ],
       "prediction": {
-        "predicted_watch_through": 0.6776,
-        "predicted_thumb_ctr": 0.0702,
+        "predicted_watch_through": 0.6596,
+        "predicted_thumb_ctr": 0.0669,
         "predicted_engagement_rate": 0.0647,
         "inputs": {
-          "thumb_score": 42.2,
+          "thumb_score": 36.2,
           "energy_match": 1.0,
           "copy_strength": 0.6,
           "duration_s": 10.0,
@@ -446,10 +449,10 @@
     }
   ],
   "recommendation": {
-    "winner": "v1-77552b",
+    "winner": "v1-7e64d4",
     "hook_text": "Nobody tells you this about aspect ratios",
     "archetype": "curiosity_gap",
-    "why": "Highest predicted watch-through (71.5%). Thumbnail scored 47.1/100 (strong tonal separation, human subject present (3 region(s))), and the hook window sits at 100% of the video's average audio energy.",
+    "why": "Highest predicted watch-through (74.1%). Thumbnail scored 56.0/100 (strong tonal separation, face present (1 region(s), 1.8% of frame)), and the hook window sits at 100% of the video's average audio energy.",
     "next_step": "Ship it, then upload the platform CSV to this video to replace the prior with measured lift."
   },
   "disclaimer": "Predicted values are a documented prior over measured signals (thumbnail score, hook energy match, copy strength, duration, platform). Upload real telemetry to replace them with measurements."

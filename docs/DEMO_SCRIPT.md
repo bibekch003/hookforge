@@ -72,10 +72,11 @@ python scripts/demo_run.py --platforms youtube_shorts,youtube --variants 3 --cli
 **On screen:** scroll to the ranked table.
 
 **Narration:**
-> "Three variants, ranked. Curiosity gap at seventy-one percent predicted watch-through,
-> result-first second, contrarian third. And notice rank two has a worse thumbnail than rank
-> three but still beats it — because the model weighs hook energy and copy strength too.
-> That trade-off is the whole point."
+> "Three variants, ranked. Curiosity gap at seventy-four percent predicted watch-through,
+> result-first second, contrarian third. Look at where they start: sixteen seconds, two
+> seconds, five seconds. Those are the three hottest audio windows, not arbitrary offsets.
+> And watch-through is not the thumbnail score — it also weighs hook energy match, copy
+> strength and duration, so the columns do not have to agree."
 
 ## 1:35 – 2:30 · The dashboard
 

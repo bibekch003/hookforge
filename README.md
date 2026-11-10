@@ -230,7 +230,7 @@ python scripts/demo_run.py path/to/take.mp4 \
 |---|---|---|
 | Contrast | 0.28 | std-dev of luma, normalised |
 | Colourfulness | 0.18 | Hasler–Süsstrunk metric, normalised |
-| Subject presence | 0.26 | face area via Haar cascade, else skin-tone salience |
+| Subject presence | 0.26 | detection via Haar cascade (else skin-tone salience), weighted by area |
 | Text legibility | 0.18 | inverse of local gradient noise under the text box |
 | Cleanliness | 0.10 | inverse of Canny edge density |
 
@@ -289,20 +289,28 @@ scene cuts   4.0, 8.0, 12.0, 16.0, 20.0           ← exact scene boundaries
 
 | Rank | Archetype | Hook | Thumb | Watch-through | Starts at |
 |---|---|---|---|---|---|
-| 1 | curiosity_gap | "Nobody tells you this about aspect ratios" | 47.1 | 71.5 % | 16.0 s |
-| 2 | result_first | "This is the result. Here's the 12 seconds that made it." | 39.3 | 69.5 % | 2.0 s |
-| 3 | contrarian | "Stop doing aspect ratios like this" | 42.2 | 67.8 % | 5.0 s |
+| 1 | curiosity_gap | "Nobody tells you this about aspect ratios" | 56.0 | 74.1 % | 16.0 s |
+| 2 | result_first | "This is the result. Here's the 12 seconds that made it." | 51.6 | 73.1 % | 2.0 s |
+| 3 | contrarian | "Stop doing aspect ratios like this" | 36.2 | 66.0 % | 5.0 s |
 
-Total wall time **57.2 s** for 3 variants × 2 platforms (6 rendered MP4s + 3 thumbnails +
+Total wall time **≈56 s** for 3 variants × 2 platforms (6 rendered MP4s + 3 thumbnails +
 captions). The full JSON report is in [`docs/assets/sample-report.json`](docs/assets/sample-report.json).
 
 Rendered thumbnail from that run (blur-pad framing for 9:16, text fitted to the safe area):
 
 ![Rendered thumbnail variant](docs/assets/thumbnail-9x16.jpg)
 
-Note the ranking is not simply thumbnail order: variant 3 scores higher on the thumbnail
-but loses on hook energy match, which is exactly the trade-off the model is meant to
-surface.
+Two things to read off that table. First, the three variants open at **16 s, 2 s and 5 s** —
+those are the three highest-ranked audio windows, not arbitrary offsets. Second,
+watch-through is not the thumbnail score: it also weighs hook energy match, copy strength
+and duration, so the columns do not have to agree.
+
+Scores are not identical across environments. Subject detection uses the Haar cascade when
+the installed OpenCV has it (4.x — which `requirements.txt` pins) and a skin-tone salience
+proxy on 5.x, which removed the cascade API. The numbers above come from the pinned 4.x
+install. A cascade is a detector, not ground truth: on a synthetic cartoon subject it can
+miss a frame, which is why variant 3 reports "no clear human subject detected in this frame"
+while still rendering a visible figure.
 
 ## 11. How this maps to the track's four sub-problems
 
