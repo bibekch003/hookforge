@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hookforge — agentic retention studio</title>
+<link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">◈</span>
+    <div>
+      <h1>Hookforge</h1>
+      <p>Agentic retention studio for solo creators</p>
+    </div>
+  </div>
+  <div class="health" id="health">checking engine…</div>
+</header>
+
+<main>
+  <section class="panel" id="uploadPanel">
+    <div class="panel-head">
+      <h2>1 · Feed it a raw clip</h2>
+      <p>One long take in, platform-ready hook variants out. Everything runs locally.</p>
+    </div>
+
+    <div class="dropzone" id="dropzone">
+      <input type="file" id="fileInput" accept="video/*" hidden />
+      <p class="dz-main">Drop an MP4 / MOV here, or <button class="link" id="pickBtn">browse</button></p>
+      <p class="dz-sub" id="fileLabel">No file selected</p>
+    </div>
+
+    <div class="options">
+      <fieldset>
+        <legend>Delivery targets</legend>
+        <div class="chips" id="platformChips"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Variants</legend>
+        <input type="range" id="nVariants" min="2" max="6" value="3" />
+        <output id="nVariantsOut">3</output>
+      </fieldset>
+      <fieldset>
+        <legend>Hook length (s)</legend>
+        <input type="range" id="clipSeconds" min="5" max="30" value="10" />
+        <output id="clipSecondsOut">10s</output>
+      </fieldset>
+      <fieldset>
+        <legend>Copy engine</legend>
+        <select id="engine">
+          <option value="offline">Deterministic (offline)</option>
+          <option value="llm">LLM adapter (needs key)</option>
+        </select>
+      </fieldset>
+    </div>
+
+    <label class="transcript-toggle">
+      <input type="checkbox" id="useTranscript" />
+      <span>I have a transcript (skips ASR)</span>
+    </label>
+    <textarea id="transcript" rows="3" placeholder="Paste your script or transcript here…" hidden></textarea>
+
+    <div class="actions">
+      <button class="primary" id="runBtn">Run the agent chain</button>
+      <button class="ghost" id="demoBtn">Run on the sample clip</button>
+    </div>
+    <div class="status" id="status" hidden></div>
+  </section>
+
+  <section id="results" hidden>
+    <section class="panel">
+      <div class="panel-head">
+        <h2>2 · What the agents found</h2>
+        <p id="videoMeta"></p>
+      </div>
+      <div class="timeline-wrap">
+        <div class="tl-head"><span>Audio energy across the clip</span><span class="tl-legend">▲ = hook windows</span></div>
+        <svg id="timeline" viewBox="0 0 800 120" preserveAspectRatio="none"></svg>
+      </div>
+      <div class="recommend" id="recommend"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>3 · Hook variants</h2>
+        <p>Each card is a rendered thumbnail, a scored hook, captions and per-platform renders.</p>
+      </div>
+      <div class="grid" id="variants"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>4 · Engagement model</h2>
+        <p id="modelNote"></p>
+      </div>
+      <div class="table-wrap"><table id="analytics"></table></div>
+      <div class="telemetry">
+        <label class="link" for="telemetryInput">Upload a platform CSV to replace the prior with measured lift</label>
+        <input type="file" id="telemetryInput" accept=".csv" hidden />
+        <a class="ghost small" href="/static/telemetry_template.csv" download>download template</a>
+      </div>
+      <div id="telemetryOut"></div>
+    </section>
+  </section>
+</main>
+
+<footer>
+  <p>Predicted numbers are a documented prior over measured signals, not a promise about any algorithm's ranking.</p>
+</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

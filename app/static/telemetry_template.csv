@@ -1,0 +1,4 @@
+variant_id,platform,impressions,views,avg_watch_s,likes,comments,shares
+v1-abc123,youtube_shorts,12000,1480,5.2,132,18,9
+v2-def456,youtube_shorts,11800,990,3.4,61,7,3
+v3-ghi789,youtube_shorts,12100,1710,6.1,201,24,15

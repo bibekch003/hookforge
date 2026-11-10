@@ -1,0 +1,18 @@
+# generated / runtime
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# app data: uploads, renders, thumbnails, sqlite
+data/
+
+# intermediates from the sample builder
+samples/_frames/
+samples/_audio.wav
+
+# tooling
+.pytest_cache/
+.DS_Store
+Thumbs.db

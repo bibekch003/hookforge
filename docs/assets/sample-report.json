@@ -1,0 +1,456 @@
+{
+  "video_id": "sample_creator_clip-7100e6ba",
+  "filename": "sample_creator_clip.mp4",
+  "meta": {
+    "width": 1280,
+    "height": 720,
+    "fps": 12.0,
+    "frames": 288,
+    "duration": 24.0,
+    "aspect": 1.7778,
+    "has_audio": true,
+    "size_mb": 0.39
+  },
+  "analysis": {
+    "energy_timeline": [
+      {
+        "t": 0.0,
+        "energy": 0.1386,
+        "speech": 0.1607
+      },
+      {
+        "t": 1.0,
+        "energy": 0.1779,
+        "speech": 0.1899
+      },
+      {
+        "t": 2.0,
+        "energy": 0.1739,
+        "speech": 0.052
+      },
+      {
+        "t": 3.0,
+        "energy": 0.193,
+        "speech": 0.1705
+      },
+      {
+        "t": 4.0,
+        "energy": 0.4919,
+        "speech": 0.1181
+      },
+      {
+        "t": 5.0,
+        "energy": 0.4274,
+        "speech": 0.1894
+      },
+      {
+        "t": 6.0,
+        "energy": 0.5327,
+        "speech": 0.1133
+      },
+      {
+        "t": 7.0,
+        "energy": 0.5158,
+        "speech": 0.2112
+      },
+      {
+        "t": 8.0,
+        "energy": 0.1745,
+        "speech": 0.097
+      },
+      {
+        "t": 9.0,
+        "energy": 0.1835,
+        "speech": 0.1725
+      },
+      {
+        "t": 10.0,
+        "energy": 0.1666,
+        "speech": 0.0536
+      },
+      {
+        "t": 11.0,
+        "energy": 0.2179,
+        "speech": 0.0592
+      },
+      {
+        "t": 12.0,
+        "energy": 0.2005,
+        "speech": 0.1252
+      },
+      {
+        "t": 13.0,
+        "energy": 0.1757,
+        "speech": 0.1577
+      },
+      {
+        "t": 14.0,
+        "energy": 0.1808,
+        "speech": 0.2053
+      },
+      {
+        "t": 15.0,
+        "energy": 0.1762,
+        "speech": 0.0568
+      },
+      {
+        "t": 16.0,
+        "energy": 0.5176,
+        "speech": 0.1615
+      },
+      {
+        "t": 17.0,
+        "energy": 0.5172,
+        "speech": 0.1166
+      },
+      {
+        "t": 18.0,
+        "energy": 0.4842,
+        "speech": 0.1494
+      },
+      {
+        "t": 19.0,
+        "energy": 0.4437,
+        "speech": 0.1699
+      },
+      {
+        "t": 20.0,
+        "energy": 0.1833,
+        "speech": 0.1207
+      },
+      {
+        "t": 21.0,
+        "energy": 0.19,
+        "speech": 0.1824
+      },
+      {
+        "t": 22.0,
+        "energy": 0.1788,
+        "speech": 0.0951
+      },
+      {
+        "t": 23.0,
+        "energy": 0.1234,
+        "speech": 0.0554
+      }
+    ],
+    "hook_windows": [
+      {
+        "start": 16.0,
+        "energy": 0.5064,
+        "speech": 0.1027,
+        "score": 1.7236
+      },
+      {
+        "start": 5.0,
+        "energy": 0.492,
+        "speech": 0.1343,
+        "score": 1.6764
+      },
+      {
+        "start": 2.0,
+        "energy": 0.2863,
+        "speech": 0.1714,
+        "score": 0.9624
+      },
+      {
+        "start": 19.0,
+        "energy": 0.2723,
+        "speech": 0.1013,
+        "score": 0.917
+      },
+      {
+        "start": 11.0,
+        "energy": 0.198,
+        "speech": 0.1294,
+        "score": 0.7696
+      },
+      {
+        "start": 8.0,
+        "energy": 0.1749,
+        "speech": 0.1301,
+        "score": 0.6155
+      }
+    ],
+    "scene_cuts": [
+      4.0,
+      8.0,
+      12.0,
+      16.0,
+      20.0
+    ],
+    "transcript_source": "sidecar",
+    "transcript_preview": "I spent three years editing my own videos and losing the first thousand viewers in the first three seconds. Then I stopped starting with the intro. Now I open with the result, the mess, or the mistake. Here is the workflow I actually use now. I pull the loudest thirty seconds out of the raw take and I build the hook around that moment. Then I render the same hook in three aspect ratios so I can post it everywhere without re-editing. The captions get rewritten for each platform because a forty two character line breaks on a reel. And the thumbnail is the last thing I make, not the first. That s",
+    "plan": {
+      "engine_requested": "offline",
+      "engine_used": "offline",
+      "topic": "aspect ratios",
+      "count": 3,
+      "generic_topic": false,
+      "note": "Deterministic copy engine (no API key required)."
+    }
+  },
+  "platforms": [
+    "youtube_shorts",
+    "youtube"
+  ],
+  "variants": [
+    {
+      "variant_id": "v1-77552b",
+      "archetype": "curiosity_gap",
+      "text": "Nobody tells you this about aspect ratios",
+      "start": 16.0,
+      "duration": 10.0,
+      "style": "bold_lower",
+      "rationale": "Opens an information gap the viewer wants closed.",
+      "engine": "offline",
+      "topic": "aspect ratios",
+      "copy_strength": 0.74,
+      "energy_match": 1.0,
+      "meta": {},
+      "thumb_path": "/scratch/work/hookforge/data/thumbs/sample_creator_clip-7100e6ba/v1-77552b_bold_lower.jpg",
+      "thumb_url": "/media/thumbs/sample_creator_clip-7100e6ba/v1-77552b_bold_lower.jpg",
+      "poster_path": "/scratch/work/hookforge/data/thumbs/sample_creator_clip-7100e6ba/v1-77552b_poster.jpg",
+      "thumbnail_score": {
+        "score": 47.1,
+        "contrast": 0.84,
+        "colorfulness": 0.178,
+        "face_ratio": 0.0625,
+        "faces": 3,
+        "subject_method": "skin-salience",
+        "legibility": 0.368,
+        "clutter": 0.05,
+        "reasons": [
+          "strong tonal separation",
+          "human subject present (3 region(s))"
+        ]
+      },
+      "caption_count": 4,
+      "caption_wps": 3.9,
+      "caption_files": {
+        "srt": "/scratch/work/hookforge/data/work/v1-77552b.srt",
+        "vtt": "/scratch/work/hookforge/data/work/v1-77552b.vtt"
+      },
+      "caption_preview": [
+        "The captions get rewritten for each platform because a",
+        "forty two character line breaks on a reel. And the",
+        "thumbnail is the last thing I make, not the first.",
+        "That single change doubled my watch time in six weeks."
+      ],
+      "exports": [
+        {
+          "platform": "youtube_shorts",
+          "label": "YouTube Shorts",
+          "path": "/scratch/work/hookforge/data/exports/sample_creator_clip-7100e6ba/v1-77552b_youtube_shorts.mp4",
+          "width": 1080,
+          "height": 1920,
+          "size_mb": 0.29,
+          "captions_burned": true,
+          "warnings": [],
+          "download_url": "/media/exports/sample_creator_clip-7100e6ba/v1-77552b_youtube_shorts.mp4"
+        },
+        {
+          "platform": "youtube",
+          "label": "YouTube (16:9)",
+          "path": "/scratch/work/hookforge/data/exports/sample_creator_clip-7100e6ba/v1-77552b_youtube.mp4",
+          "width": 1920,
+          "height": 1080,
+          "size_mb": 0.26,
+          "captions_burned": true,
+          "warnings": [],
+          "download_url": "/media/exports/sample_creator_clip-7100e6ba/v1-77552b_youtube.mp4"
+        }
+      ],
+      "prediction": {
+        "predicted_watch_through": 0.7147,
+        "predicted_thumb_ctr": 0.0757,
+        "predicted_engagement_rate": 0.0717,
+        "inputs": {
+          "thumb_score": 47.1,
+          "energy_match": 1.0,
+          "copy_strength": 0.74,
+          "duration_s": 10.0,
+          "platform": "youtube_shorts",
+          "platform_bonus": 0.055,
+          "duration_penalty": 0.0
+        },
+        "note": "Predicted values are a documented prior over measured signals (thumbnail score, hook energy match, copy strength, duration, platform). Upload real telemetry to replace them with measurements."
+      },
+      "rank": 1
+    },
+    {
+      "variant_id": "v3-922f68",
+      "archetype": "result_first",
+      "text": "This is the result. Here's the 12 seconds that made it.",
+      "start": 2.0,
+      "duration": 10.0,
+      "style": "top_strip",
+      "rationale": "Leads with the payoff, then promises the mechanism.",
+      "engine": "offline",
+      "topic": "aspect ratios",
+      "copy_strength": 0.76,
+      "energy_match": 1.0,
+      "meta": {},
+      "thumb_path": "/scratch/work/hookforge/data/thumbs/sample_creator_clip-7100e6ba/v3-922f68_top_strip.jpg",
+      "thumb_url": "/media/thumbs/sample_creator_clip-7100e6ba/v3-922f68_top_strip.jpg",
+      "poster_path": "/scratch/work/hookforge/data/thumbs/sample_creator_clip-7100e6ba/v3-922f68_poster.jpg",
+      "thumbnail_score": {
+        "score": 39.3,
+        "contrast": 0.809,
+        "colorfulness": 0.152,
+        "face_ratio": 0.0108,
+        "faces": 1,
+        "subject_method": "skin-salience",
+        "legibility": 0.203,
+        "clutter": 0.045,
+        "reasons": [
+          "strong tonal separation",
+          "no clear human subject"
+        ]
+      },
+      "caption_count": 6,
+      "caption_wps": 5.1,
+      "caption_files": {
+        "srt": "/scratch/work/hookforge/data/work/v3-922f68.srt",
+        "vtt": "/scratch/work/hookforge/data/work/v3-922f68.vtt"
+      },
+      "caption_preview": [
+        "first thousand viewers in the first three seconds.",
+        "Then I stopped starting with the intro. Now I open",
+        "with the result, the mess, or the mistake. Here is the",
+        "workflow I actually use now. I pull the loudest thirty"
+      ],
+      "exports": [
+        {
+          "platform": "youtube_shorts",
+          "label": "YouTube Shorts",
+          "path": "/scratch/work/hookforge/data/exports/sample_creator_clip-7100e6ba/v3-922f68_youtube_shorts.mp4",
+          "width": 1080,
+          "height": 1920,
+          "size_mb": 0.41,
+          "captions_burned": true,
+          "warnings": [],
+          "download_url": "/media/exports/sample_creator_clip-7100e6ba/v3-922f68_youtube_shorts.mp4"
+        },
+        {
+          "platform": "youtube",
+          "label": "YouTube (16:9)",
+          "path": "/scratch/work/hookforge/data/exports/sample_creator_clip-7100e6ba/v3-922f68_youtube.mp4",
+          "width": 1920,
+          "height": 1080,
+          "size_mb": 0.36,
+          "captions_burned": true,
+          "warnings": [],
+          "download_url": "/media/exports/sample_creator_clip-7100e6ba/v3-922f68_youtube.mp4"
+        }
+      ],
+      "prediction": {
+        "predicted_watch_through": 0.6945,
+        "predicted_thumb_ctr": 0.0718,
+        "predicted_engagement_rate": 0.0727,
+        "inputs": {
+          "thumb_score": 39.3,
+          "energy_match": 1.0,
+          "copy_strength": 0.76,
+          "duration_s": 10.0,
+          "platform": "youtube_shorts",
+          "platform_bonus": 0.055,
+          "duration_penalty": 0.0
+        },
+        "note": "Predicted values are a documented prior over measured signals (thumbnail score, hook energy match, copy strength, duration, platform). Upload real telemetry to replace them with measurements."
+      },
+      "rank": 2
+    },
+    {
+      "variant_id": "v2-1f652b",
+      "archetype": "contrarian",
+      "text": "Stop doing aspect ratios like this",
+      "start": 5.0,
+      "duration": 10.0,
+      "style": "split_band",
+      "rationale": "Pattern-breaks against the standard advice in the niche.",
+      "engine": "offline",
+      "topic": "aspect ratios",
+      "copy_strength": 0.6,
+      "energy_match": 1.0,
+      "meta": {},
+      "thumb_path": "/scratch/work/hookforge/data/thumbs/sample_creator_clip-7100e6ba/v2-1f652b_split_band.jpg",
+      "thumb_url": "/media/thumbs/sample_creator_clip-7100e6ba/v2-1f652b_split_band.jpg",
+      "poster_path": "/scratch/work/hookforge/data/thumbs/sample_creator_clip-7100e6ba/v2-1f652b_poster.jpg",
+      "thumbnail_score": {
+        "score": 42.2,
+        "contrast": 0.256,
+        "colorfulness": 0.107,
+        "face_ratio": 0.0875,
+        "faces": 2,
+        "subject_method": "skin-salience",
+        "legibility": 0.954,
+        "clutter": 0.004,
+        "reasons": [
+          "human subject present (2 region(s))",
+          "clean plate under the text"
+        ]
+      },
+      "caption_count": 5,
+      "caption_wps": 5.5,
+      "caption_files": {
+        "srt": "/scratch/work/hookforge/data/work/v2-1f652b.srt",
+        "vtt": "/scratch/work/hookforge/data/work/v2-1f652b.vtt"
+      },
+      "caption_preview": [
+        "the intro. Now I open with the result, the mess, or",
+        "the mistake. Here is the workflow I actually use now.",
+        "I pull the loudest thirty seconds out of the raw take",
+        "and I build the hook around that moment. Then I render"
+      ],
+      "exports": [
+        {
+          "platform": "youtube_shorts",
+          "label": "YouTube Shorts",
+          "path": "/scratch/work/hookforge/data/exports/sample_creator_clip-7100e6ba/v2-1f652b_youtube_shorts.mp4",
+          "width": 1080,
+          "height": 1920,
+          "size_mb": 0.41,
+          "captions_burned": true,
+          "warnings": [],
+          "download_url": "/media/exports/sample_creator_clip-7100e6ba/v2-1f652b_youtube_shorts.mp4"
+        },
+        {
+          "platform": "youtube",
+          "label": "YouTube (16:9)",
+          "path": "/scratch/work/hookforge/data/exports/sample_creator_clip-7100e6ba/v2-1f652b_youtube.mp4",
+          "width": 1920,
+          "height": 1080,
+          "size_mb": 0.36,
+          "captions_burned": true,
+          "warnings": [],
+          "download_url": "/media/exports/sample_creator_clip-7100e6ba/v2-1f652b_youtube.mp4"
+        }
+      ],
+      "prediction": {
+        "predicted_watch_through": 0.6776,
+        "predicted_thumb_ctr": 0.0702,
+        "predicted_engagement_rate": 0.0647,
+        "inputs": {
+          "thumb_score": 42.2,
+          "energy_match": 1.0,
+          "copy_strength": 0.6,
+          "duration_s": 10.0,
+          "platform": "youtube_shorts",
+          "platform_bonus": 0.055,
+          "duration_penalty": 0.0
+        },
+        "note": "Predicted values are a documented prior over measured signals (thumbnail score, hook energy match, copy strength, duration, platform). Upload real telemetry to replace them with measurements."
+      },
+      "rank": 3
+    }
+  ],
+  "recommendation": {
+    "winner": "v1-77552b",
+    "hook_text": "Nobody tells you this about aspect ratios",
+    "archetype": "curiosity_gap",
+    "why": "Highest predicted watch-through (71.5%). Thumbnail scored 47.1/100 (strong tonal separation, human subject present (3 region(s))), and the hook window sits at 100% of the video's average audio energy.",
+    "next_step": "Ship it, then upload the platform CSV to this video to replace the prior with measured lift."
+  },
+  "disclaimer": "Predicted values are a documented prior over measured signals (thumbnail score, hook energy match, copy strength, duration, platform). Upload real telemetry to replace them with measurements."
+}
