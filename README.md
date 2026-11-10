@@ -212,6 +212,21 @@ either.
 | Browser says "engine unreachable" | uvicorn is not running, or on another port |
 | `No module named app` | Run from the repo root (the folder containing `app/`) |
 
+### Run it without installing anything
+
+Two hosted routes, both running the real backend rather than a static copy:
+
+- **GitHub Codespaces** — repo → **Code** → **Codespaces** → *Create codespace on main*.
+  The `.devcontainer` installs dependencies and builds the sample clip for you, then run
+  `uvicorn app.main:app --host 0.0.0.0 --port 8000` and open the forwarded port.
+- **Render** — sign up with GitHub, **New +** → **Blueprint**, pick this repo, **Apply**.
+  `render.yaml` does the rest and you get a public URL.
+
+Full steps, free-tier limits and how to undo each one: [`docs/DEPLOY.md`](docs/DEPLOY.md).
+
+Note: this app decodes video with ffmpeg and scores frames with OpenCV, so it cannot be
+hosted on a static host (GitHub Pages, Netlify, Vercel's static tier).
+
 ## 7. Using it
 
 **Dashboard** (`http://127.0.0.1:8000`)
@@ -367,9 +382,13 @@ while still rendering a visible figure.
 ├── app/                    application package (see §4)
 ├── docs/
 │   ├── ARCHITECTURE.md     deeper design notes and trade-offs
+│   ├── DEPLOY.md           Codespaces / Render / Hugging Face, with undo steps
 │   ├── DEMO_SCRIPT.md      shot-by-shot video script
 │   ├── SUBMISSION.md       every submission field, filled
 │   └── assets/             rendered thumbnail, poster, sample report
+├── render.yaml             one-click Render blueprint (free plan)
+├── Dockerfile              port 7860, for Spaces / Fly / Railway
+├── .devcontainer/          Codespaces: deps + sample clip on create
 ├── samples/                synthetic demo clip + sidecar transcript
 ├── scripts/
 │   ├── make_sample_assets.py   builds the demo clip (Pillow + ffmpeg)

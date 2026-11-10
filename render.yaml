@@ -1,0 +1,28 @@
+# Render blueprint — deploy the real app (not a static copy) in a few clicks.
+#
+#   1. push this file (already in the repo)
+#   2. on render.com: New + → Blueprint → pick this repo → Apply
+#   3. Render builds it and gives you https://<name>.onrender.com
+#
+# Undo: dashboard → the service → Settings → Delete Service.
+#
+# Free plan notes: the instance sleeps after ~15 min idle (first request after that
+# takes ~30 s to wake), and the filesystem is ephemeral — uploads and renders live in
+# /app/data and vanish on redeploy or restart. That is fine for a demo; the bundled
+# sample clip is in the repo so /api/demo always works without an upload.
+services:
+  - type: web
+    name: hookforge
+    runtime: python
+    plan: free
+    region: singapore
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      # Pin the interpreter: the wheels for opencv/numpy/pillow are built for 3.12.
+      - key: PYTHON_VERSION
+        value: "3.12.10"
+      # 512 MB of RAM on the free plan; keep uploads small so ffmpeg doesn't OOM.
+      - key: HOOKFORGE_MAX_UPLOAD_MB
+        value: "60"

@@ -1,0 +1,19 @@
+{
+  "name": "Hookforge",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "postCreateCommand": "pip install -r requirements.txt && python scripts/make_sample_assets.py",
+  "forwardPorts": [
+    8000
+  ],
+  "portsAttributes": {
+    "8000": {
+      "label": "Hookforge dashboard",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postAttachCommand": "echo 'Start the app with:  uvicorn app.main:app --host 0.0.0.0 --port 8000'",
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "4gb"
+  }
+}
